@@ -184,12 +184,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "ResultsLogger.cpp",
+			"path" : "ObslugaPliku.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "ResultsLogger.h",
+			"path" : "ObslugaPliku.h",
 			"sourceGroupIndex" : 1
 		},
 		{
