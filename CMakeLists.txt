@@ -10,4 +10,4 @@ add_executable(ProjektAlgorytmySortowania
         Test.cpp Test.h
         Timer.cpp Timer.h
         ResultsLogger.cpp ResultsLogger.h
-        Menu.cpp Menu.h)
+        Menu.cpp Menu.h AlgorytmySortowania/PrzezWstawianie.cpp AlgorytmySortowania/PrzezWstawianie.h AlgorytmySortowania/PrzezKopcowanie.cpp AlgorytmySortowania/PrzezKopcowanie.h AlgorytmySortowania/Shella.cpp AlgorytmySortowania/Shella.h)

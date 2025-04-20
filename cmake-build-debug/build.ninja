@@ -91,6 +91,24 @@ build CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj: CXX_COMPILER__Proj
   OBJECT_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir
 
+build CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/PrzezWstawianie.cpp.obj: CXX_COMPILER__ProjektAlgorytmySortowania_Debug C$:/Users/ameli/Documents/Inventor$ Interoperability/Github/ProjektAlgorytmySortowania/AlgorytmySortowania/PrzezWstawianie.cpp || cmake_object_order_depends_target_ProjektAlgorytmySortowania
+  DEP_FILE = CMakeFiles\ProjektAlgorytmySortowania.dir\AlgorytmySortowania\PrzezWstawianie.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir\AlgorytmySortowania
+
+build CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/PrzezKopcowanie.cpp.obj: CXX_COMPILER__ProjektAlgorytmySortowania_Debug C$:/Users/ameli/Documents/Inventor$ Interoperability/Github/ProjektAlgorytmySortowania/AlgorytmySortowania/PrzezKopcowanie.cpp || cmake_object_order_depends_target_ProjektAlgorytmySortowania
+  DEP_FILE = CMakeFiles\ProjektAlgorytmySortowania.dir\AlgorytmySortowania\PrzezKopcowanie.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir\AlgorytmySortowania
+
+build CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/Shella.cpp.obj: CXX_COMPILER__ProjektAlgorytmySortowania_Debug C$:/Users/ameli/Documents/Inventor$ Interoperability/Github/ProjektAlgorytmySortowania/AlgorytmySortowania/Shella.cpp || cmake_object_order_depends_target_ProjektAlgorytmySortowania
+  DEP_FILE = CMakeFiles\ProjektAlgorytmySortowania.dir\AlgorytmySortowania\Shella.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir
+  OBJECT_FILE_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir\AlgorytmySortowania
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProjektAlgorytmySortowania
@@ -99,7 +117,7 @@ build CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj: CXX_COMPILER__Proj
 #############################################
 # Link the executable ProjektAlgorytmySortowania.exe
 
-build ProjektAlgorytmySortowania.exe: CXX_EXECUTABLE_LINKER__ProjektAlgorytmySortowania_Debug CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/QuickSort.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/ObslugaDanych.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/Test.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/Timer.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/ResultsLogger.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj
+build ProjektAlgorytmySortowania.exe: CXX_EXECUTABLE_LINKER__ProjektAlgorytmySortowania_Debug CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/QuickSort.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/ObslugaDanych.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/Test.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/Timer.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/ResultsLogger.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/PrzezWstawianie.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/PrzezKopcowanie.cpp.obj CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/Shella.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ProjektAlgorytmySortowania.dir

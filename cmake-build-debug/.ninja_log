@@ -1,14 +1,21 @@
 # ninja log v5
 12	96	7668104521263806	CMakeFiles/ProjektAlgorytmySortowania.dir/TestUtils.cpp.obj	25b4167fb6121d18
-7	1001	7668759481253336	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
+3	860	7668781133769881	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
 21	107	7668104521388158	CMakeFiles/ProjektAlgorytmySortowania.dir/Timer.cpp.obj	6f3c3cdb586d233f
-1002	1135	7668759482502712	ProjektAlgorytmySortowania.exe	ec50164d70c61216
+8	571	7668781130895250	CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/PrzezKopcowanie.cpp.obj	f6dc7953dd6997c
+860	976	7668781134904473	ProjektAlgorytmySortowania.exe	e4108b792c99a88c
 31	118	7668104521506731	CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj	3c179ad7d94dd7a8
 8	94	7668104521238598	CMakeFiles/ProjektAlgorytmySortowania.dir/ResultsLogger.cpp.obj	32629410644e7818
 12	688	7668118925418830	CMakeFiles/ProjektAlgorytmySortowania.dir/DataHandler.cpp.obj	51f2c7fde47ebd59
 2	57	7668119296534097	CMakeFiles/ProjektAlgorytmySortowania.dir/SortingAlgorithms.cpp.obj	beb34bf4476b19b6
-1	140	7668760158805542	build.ninja	e2a440aa0f2b6eb7
+1	140	7668782992088792	build.ninja	e2a440aa0f2b6eb7
 6	79	7668740965390079	CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania.cpp.obj	3d4e541e54a6ad5d
 10	94	7668740965411036	CMakeFiles/ProjektAlgorytmySortowania.dir/Test.cpp.obj	773b8a644b2157ba
 10	747	7668759478705564	CMakeFiles/ProjektAlgorytmySortowania.dir/ObslugaDanych.cpp.obj	512e7a1af3831af5
 3	69	7668759471934680	CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/QuickSort.cpp.obj	ef34c36daf0e7240
+10	761	7668778761888265	CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/PrzezWstawianie.cpp.obj	e12e3d8d03746348
+8	578	7668783895083092	CMakeFiles/ProjektAlgorytmySortowania.dir/AlgorytmySortowania/Shella.cpp.obj	aeacf8f06dbb5777
+3	848	7668783897781435	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
+848	957	7668783898828195	ProjektAlgorytmySortowania.exe	74a35d491b4f3b34
+3	834	7668784071629416	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
+834	940	7668784072647177	ProjektAlgorytmySortowania.exe	74a35d491b4f3b34
