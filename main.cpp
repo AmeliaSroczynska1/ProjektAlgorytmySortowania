@@ -1,23 +1,23 @@
 #include <iostream>
-#include "SortingAlgorithms.h"
-#include "DataHandler.h"
+#include "AlgorytmySortowania/QuickSort.h"
+#include "ObslugaDanych.h"
 
 using namespace std;
 
 int main() {
     // Generowanie danych testowych
-    vector<int> data = DataHandler::generateRandomData<int>(10);
+    vector<int> dane = ObslugaDanych::generatorDanych<int>(10);
 
     // Wyświetlanie danych przed sortowaniem
     cout << "Dane przed sortowaniem:\n";
-    DataHandler::printData(data);
+    ObslugaDanych::wyswietlDane(dane);
 
     // Sortowanie
-    quickSort(data);
+    quickSort(dane);
 
     // Wyświetlanie danych po sortowaniu
     cout << "\nDane po sortowaniu:\n";
-    DataHandler::printData(data);
+    ObslugaDanych::wyswietlDane(dane);
 
     return 0;
 }
