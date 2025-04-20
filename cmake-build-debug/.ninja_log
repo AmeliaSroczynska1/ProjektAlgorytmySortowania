@@ -1,7 +1,18 @@
 # ninja log v5
-1	433	7668069768073061	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
-436	564	7668069769340231	ProjektAlgorytmySortowania.exe	ca71879f7deef5c7
-2	409	7668070426758693	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
-409	505	7668070427676450	ProjektAlgorytmySortowania.exe	ca71879f7deef5c7
-3	417	7668070476047967	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
-418	529	7668070477105031	ProjektAlgorytmySortowania.exe	ca71879f7deef5c7
+14	115	7668094695754693	CMakeFiles/ProjektAlgorytmySortowania.dir/TestUtils.cpp.obj	25b4167fb6121d18
+2	820	7668100308009981	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
+22	125	7668094696096460	CMakeFiles/ProjektAlgorytmySortowania.dir/Timer.cpp.obj	6f3c3cdb586d233f
+821	940	7668100309350596	ProjektAlgorytmySortowania.exe	194d7f3f64dbeab7
+18	117	7668094695754693	CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj	3c179ad7d94dd7a8
+27	124	7668094696096460	CMakeFiles/ProjektAlgorytmySortowania.dir/ResultsLogger.cpp.obj	32629410644e7818
+7	781	7668094702602659	CMakeFiles/ProjektAlgorytmySortowania.dir/DataHandler.cpp.obj	51f2c7fde47ebd59
+8	653	7668099863884731	CMakeFiles/ProjektAlgorytmySortowania.dir/SortingAlgorithms.cpp.obj	beb34bf4476b19b6
+1	150	7668104520035838	build.ninja	e2a440aa0f2b6eb7
+8	94	7668104521238598	CMakeFiles/ProjektAlgorytmySortowania.dir/ResultsLogger.cpp.obj	32629410644e7818
+12	96	7668104521263806	CMakeFiles/ProjektAlgorytmySortowania.dir/TestUtils.cpp.obj	25b4167fb6121d18
+21	107	7668104521388158	CMakeFiles/ProjektAlgorytmySortowania.dir/Timer.cpp.obj	6f3c3cdb586d233f
+31	118	7668104521506731	CMakeFiles/ProjektAlgorytmySortowania.dir/Menu.cpp.obj	3c179ad7d94dd7a8
+4	811	7668104528439373	CMakeFiles/ProjektAlgorytmySortowania.dir/DataHandler.cpp.obj	51f2c7fde47ebd59
+17	896	7668104529272944	CMakeFiles/ProjektAlgorytmySortowania.dir/SortingAlgorithms.cpp.obj	beb34bf4476b19b6
+26	1113	7668104531455105	CMakeFiles/ProjektAlgorytmySortowania.dir/main.cpp.obj	b4cb50531350f718
+1113	1257	7668104532851568	ProjektAlgorytmySortowania.exe	194d7f3f64dbeab7
