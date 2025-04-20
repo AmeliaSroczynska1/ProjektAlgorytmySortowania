@@ -4,24 +4,25 @@
 #include <vector>
 #include <algorithm>
 
-// Najpierw deklarujemy partition
+using namespace std;
+
 template<typename T>
-int partition(std::vector<T>& data, int left, int right) {
+int partition(vector<T>& data, int left, int right) {
     T pivot = data[right];
     int i = left - 1;
     for (int j = left; j < right; ++j) {
         if (data[j] <= pivot) {
             ++i;
-            std::swap(data[i], data[j]);
+            swap(data[i], data[j]);
         }
     }
-    std::swap(data[i + 1], data[right]);
+    swap(data[i + 1], data[right]);
     return i + 1;
 }
 
-// Definiujemy quickSort
+// Implementujemy quickSort
 template<typename T>
-void quickSort(std::vector<T>& data, int left, int right) {
+void quickSort(vector<T>& data, int left, int right) {
     if (left < right) {
         int pivotIndex = partition(data, left, right); // Teraz partition jest widoczne
         quickSort(data, left, pivotIndex - 1);
@@ -29,6 +30,7 @@ void quickSort(std::vector<T>& data, int left, int right) {
     }
 }
 
+//wrapper
 template<typename T>
 void quickSort(std::vector<T>& data) {
     if (!data.empty())
