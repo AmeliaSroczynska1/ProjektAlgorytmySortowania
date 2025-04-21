@@ -11,6 +11,7 @@
 #include "AlgorytmySortowania/QuickSort.h"
 #include "ObslugaPliku.h"
 #include "Test.h"
+#include "Timer.h"
 
 using namespace std;
 
@@ -83,18 +84,26 @@ public:
         cin >> wybor;
 
         switch(wybor){
-            case 1:
+            case 1: {
+                Timer timer("QuickSort"); // Dopisz tę linię przed sortowaniem
                 QuickSort::sortuj(daneKopia);
                 break;
-            case 2:
+            }
+            case 2: {
+                Timer timer("Shella");    // Dopisz tę linię
                 Shella::sortuj(daneKopia);
                 break;
-            case 3:
+            }
+            case 3: {
+                Timer timer("PrzezWstawianie"); // Dopisz tę linię
                 PrzezWstawianie::sortuj(daneKopia);
                 break;
-            case 4:
+            }
+            case 4: {
+                Timer timer("PrzezKopcowanie"); // Dopisz tę linię
                 PrzezKopcowanie::sortuj(daneKopia);
                 break;
+            }
             default:
                 cout << "Nieznany algorytm sortowania!" << endl;
                 return;
