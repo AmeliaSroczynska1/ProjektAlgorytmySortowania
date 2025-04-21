@@ -30,7 +30,7 @@ public:
             case 1: {
                 // Wybór rozmiaru tablicy
                 int rozmiar;
-                cout<< "Wprowadz rozmiar tablicy danych do posortowania: ";
+                cout<< "\nWprowadz rozmiar tablicy danych do posortowania: ";
                 cin>>rozmiar;
 
                 // Generowanie danych testowych
@@ -52,16 +52,26 @@ public:
         }
 
         // Wyświetlanie danych przed sortowaniem
-        cout << "Dane przed sortowaniem:\n";
+        cout << "\nDane przed sortowaniem:\n";
         ObslugaDanych::wyswietlDane(dane);
 
         // Testowanie czy tablica już jest posortowana
-        cout << "Czy chcesz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
+        cout << "\nCzy chcesz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
         int test;
         cin >> test;
         if (test == 1) {
-            Test::testSortowanie(dane);
+            int czyPosortowana = Test::testSortowanie(dane);
+            if (czyPosortowana > 0) {
+                cout << "Tablica nie jest posortowana" << endl;
+            }
+            else {
+                cout << "Tablica jest posortowana" << endl;
+                return;
+            }
         }
+
+        // Kopiowanie danych
+        vector<int> daneKopia = dane;
 
         // Wybór algorytmu sortowania
         cout << endl << "Wybierz algorytm sortowania:" << endl;
@@ -74,16 +84,16 @@ public:
 
         switch(wybor){
             case 1:
-                QuickSort::sortuj(dane);
+                QuickSort::sortuj(daneKopia);
                 break;
             case 2:
-                Shella::sortuj(dane);
+                Shella::sortuj(daneKopia);
                 break;
             case 3:
-                PrzezWstawianie::sortuj(dane);
+                PrzezWstawianie::sortuj(daneKopia);
                 break;
             case 4:
-                PrzezKopcowanie::sortuj(dane);
+                PrzezKopcowanie::sortuj(daneKopia);
                 break;
             default:
                 cout << "Nieznany algorytm sortowania!" << endl;
@@ -91,15 +101,21 @@ public:
         }
 
         // Testowanie poprawności sortowania
-        cout << "Czy chcesz teraz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
+        cout << "\nCzy chcesz teraz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
         cin >> test;
         if (test == 1) {
-            Test::testSortowanie(dane);
+            int czyPosortowana = Test::testSortowanie(daneKopia);
+            if (czyPosortowana > 0) {
+                cout << "Tablica nie jest posortowana" << endl;
+            }
+            else {
+                cout << "Tablica jest posortowana" << endl;
+            }
         }
 
         // Wyświetlanie danych po sortowaniu
         cout << "\nDane po sortowaniu:\n";
-        ObslugaDanych::wyswietlDane(dane);
+        ObslugaDanych::wyswietlDane(daneKopia);
     }
 };
 
