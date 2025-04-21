@@ -10,6 +10,7 @@
 #include "AlgorytmySortowania/Shella.h"
 #include "AlgorytmySortowania/QuickSort.h"
 #include "ObslugaPliku.h"
+#include "Test.h"
 
 using namespace std;
 
@@ -54,6 +55,14 @@ public:
         cout << "Dane przed sortowaniem:\n";
         ObslugaDanych::wyswietlDane(dane);
 
+        // Testowanie czy tablica już jest posortowana
+        cout << "Czy chcesz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
+        int test;
+        cin >> test;
+        if (test == 1) {
+            Test::testSortowanie(dane);
+        }
+
         // Wybór algorytmu sortowania
         cout << endl << "Wybierz algorytm sortowania:" << endl;
         cout << "1 - Sortowanie szybkie" << endl;
@@ -79,6 +88,13 @@ public:
             default:
                 cout << "Nieznany algorytm sortowania!" << endl;
                 return;
+        }
+
+        // Testowanie poprawności sortowania
+        cout << "Czy chcesz teraz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
+        cin >> test;
+        if (test == 1) {
+            Test::testSortowanie(dane);
         }
 
         // Wyświetlanie danych po sortowaniu
