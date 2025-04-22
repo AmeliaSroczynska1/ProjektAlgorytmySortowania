@@ -16,11 +16,11 @@ public:
         mt19937 gen(rd());
 
         if constexpr (is_integral_v<T>) {                     // Jeśli int
-            uniform_int_distribution<T> rozklad(1, 100);      // Rozkład równomierny dla liczb całkowitych od 1 do 100
+            uniform_int_distribution<T> rozklad(1, 10000);      // Rozkład równomierny dla liczb całkowitych od 1 do 100
             for (auto& element : dane)
                 element = rozklad(gen);                       // Losuje liczbę całkowitą i przypisuje do elementu
         } else {                                              // Jeśli float, double
-            uniform_real_distribution<T> rozklad(0.0, 100.0); // Rozkład równomierny dla liczb rzeczywistych od 0.0 do 100.0
+            uniform_real_distribution<T> rozklad(0.0, 10000.0); // Rozkład równomierny dla liczb rzeczywistych od 0.0 do 100.0
             for (auto& element : dane)
                 element = rozklad(gen);                       // Losuje liczbę rzeczywistą i przypisuje do elementu
         }

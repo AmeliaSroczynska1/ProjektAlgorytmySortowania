@@ -1,0 +1,30 @@
+int
+tablica całkowicie losowa
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 10000 : 1 ms
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 20000 : 2 ms
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 50000 : 7 ms
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 100000 : 18 ms
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 200000 : 46 ms
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 500000 : 177 ms
+Algorytm: QuickSort, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 1000000 : 537 ms
+
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 10000 : 2 ms
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 20000 : 4 ms
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 50000 : 14 ms
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 100000 : 32 ms
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 200000 : 69 ms
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 500000 : 196 ms
+Algorytm: Shella, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 1000000 : 442 ms
+
+Algorytm: PrzezWstawianie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 10000 : 110 ms
+Algorytm: PrzezWstawianie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 20000 : 464 ms
+Algorytm: PrzezWstawianie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 50000 : 2767 ms
+
+
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 10000 : 2 ms
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 20000 : 5 ms
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 50000 : 14 ms
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 100000 : 29 ms
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 200000 : 67 ms
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 500000 : 185 ms
+Algorytm: PrzezKopcowanie, średni czas sortowania po 100 iteracjach dla rozmiaru tablicy 1000000 : 410 ms
