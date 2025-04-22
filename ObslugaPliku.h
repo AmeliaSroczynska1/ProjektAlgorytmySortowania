@@ -19,7 +19,7 @@ public:
     bool wczytajRozmiar();
     bool wczytajWyniki();
     void zamknijPlik();
-    static void zapiszCzas(const string& nazwaAlgorytmu, long long czas, int rozmiar);
+    static void zapiszCzas(const string& nazwaAlgorytmu, float czas, int rozmiar);
 
     void otworz(const string& nazwaPliku); // Nowa metoda
 };

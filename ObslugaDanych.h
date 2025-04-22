@@ -4,36 +4,66 @@
 #include <vector>
 #include <random>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 class ObslugaDanych {
 public:
+    enum TypDanych {
+        LOSOWE,
+        POSORTOWANE_ROSNACO,
+        POSORTOWANE_MALEJACO,
+        CZESCIOWO_POSORTOWANE1,
+        CZESCIOWO_POSORTOWANE2
+    };
+
     template<typename T>
-    static vector<T> generatorDanych(int rozmiar) {
-        vector<T> dane(rozmiar);                       // Tworzenie wektora
-        random_device rd;                              // Tworzenie urządzenia losowego do inicjalizacji generatora
+    static vector<T> generatorDanych(int rozmiar, TypDanych typ = LOSOWE) {
+        vector<T> dane(rozmiar);
+        random_device rd;
         mt19937 gen(rd());
 
-        if constexpr (is_integral_v<T>) {                     // Jeśli int
-            uniform_int_distribution<T> rozklad(1, 100);      // Rozkład równomierny dla liczb całkowitych od 1 do 100
-            for (auto& element : dane)
-                element = rozklad(gen);                       // Losuje liczbę całkowitą i przypisuje do elementu
-        } else {                                              // Jeśli float, double
-            uniform_real_distribution<T> rozklad(0.0, 100.0); // Rozkład równomierny dla liczb rzeczywistych od 0.0 do 100.0
-            for (auto& element : dane)
-                element = rozklad(gen);                       // Losuje liczbę rzeczywistą i przypisuje do elementu
+        // Generuj losowe dane
+        if constexpr (is_integral_v<T>) {
+            uniform_int_distribution<T> rozklad(1, 10000);
+            for (auto& element : dane) element = rozklad(gen);
+        } else {
+            uniform_real_distribution<T> rozklad(0.0, 10000.0);
+            for (auto& element : dane) element = rozklad(gen);
         }
-        return dane;                                   // Zwróć wygenerowany wektor
+
+        // Dostosuj dane według wybranego typu
+        switch(typ) {
+            case POSORTOWANE_ROSNACO:
+                sort(dane.begin(), dane.end());
+                break;
+            case POSORTOWANE_MALEJACO:
+                sort(dane.begin(), dane.end(), greater<T>());
+                break;
+            case CZESCIOWO_POSORTOWANE1: {
+                int posortowaneDo = max(1, static_cast<int>(rozmiar * 0.33));
+                sort(dane.begin(), dane.begin() + posortowaneDo);
+                break;
+            }
+            case CZESCIOWO_POSORTOWANE2: {
+                int posortowaneDo = max(1, static_cast<int>(rozmiar * 0.66));
+                sort(dane.begin(), dane.begin() + posortowaneDo);
+                break;
+            }
+            case LOSOWE:
+            default:
+                break;
+        }
+
+        return dane;
     }
 
     template<typename T>
-    static void wyswietlDane(const vector<T>& data) { // Metoda wyświetlająca zawartość wektora
-        for (const auto& element : data)              // Iteracja po każdym elemencie wektora
-            cout << element << " ";
+    static void wyswietlDane(const vector<T>& data) {
+        for (const auto& element : data) cout << element << " ";
         cout << "\n";
     }
 };
 
 #endif // DATA_HANDLER_H
-
