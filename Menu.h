@@ -22,57 +22,20 @@ public:
         vector<int> dane;
 
         cout << "Witaj w programie do sortowania!" << endl;
-        int wybor;
-        cout << "Chcesz wygenerowac losowa tablice do posortowania czy wczytac ja z pliku tekstowego?" << endl;
-        cout << "1 - Wygenerowac losowa tablice" << endl;
-        cout << "2 - Wczytac z pliku tekstowego" << endl;
-        cin >> wybor;
-        switch(wybor){
-            case 1: {
-                // Wybór rozmiaru tablicy
-                int rozmiar;
-                cout<< "\nWprowadz rozmiar tablicy danych do posortowania: ";
-                cin>>rozmiar;
 
-                // Generowanie danych testowych
-                dane = ObslugaDanych::generatorDanych<int>(rozmiar);
-                break;
-            }
-            case 2: {
-                string plik;
-                cout << "Podaj nazwe pliku do wczytania: ";
-                cin >> plik;
+        // Wersja z wczytywaniem pliku
+        /*
+        string plik;
+        cout << "Podaj nazwe pliku do wczytania: ";
+        cin >> plik;
+        obsluga.otworz(plik);
+        dane = obsluga.dane;
+        */
 
-                obsluga.otworz(plik);
-                dane = obsluga.dane; // Przechowuje wczytane dane
-                break;
-            }
-            default:
-                cout << "Nieznany wybor, musisz wcisnac 1 lub 2" << endl;
-                return;
-        }
-
-        // Wyświetlanie danych przed sortowaniem
-        cout << "\nDane przed sortowaniem:\n";
-        ObslugaDanych::wyswietlDane(dane);
-
-        // Testowanie czy tablica już jest posortowana
-        cout << "\nCzy chcesz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
-        int test;
-        cin >> test;
-        if (test == 1) {
-            int czyPosortowana = Test::testSortowanie(dane);
-            if (czyPosortowana > 0) {
-                cout << "Tablica nie jest posortowana" << endl;
-            }
-            else {
-                cout << "Tablica jest posortowana" << endl;
-                return;
-            }
-        }
-
-        // Kopiowanie danych
-        vector<int> daneKopia = dane;
+        // Wybór rozmiaru tablicy
+        int rozmiar;
+        cout << "\nWprowadz rozmiar tablicy danych do posortowania: ";
+        cin >> rozmiar;
 
         // Wybór algorytmu sortowania
         cout << endl << "Wybierz algorytm sortowania:" << endl;
@@ -81,50 +44,61 @@ public:
         cout << "3 - Sortowanie przez wstawianie" << endl;
         cout << "4 - Sortowanie przez kopcowanie" << endl;
 
+        int wybor;
         cin >> wybor;
 
-        switch(wybor){
-            case 1: {
-                Timer timer("QuickSort"); // Dopisz tę linię przed sortowaniem
-                QuickSort::sortuj(daneKopia);
+        // Definicja funkcji sortującej i nazwy algorytmu
+        void (*wybranyAlgorytm)(vector<int>&) = nullptr; // Wskaźnik do funkcji
+        string nazwaAlgorytmu;
+
+        switch(wybor) {
+            case 1:
+                wybranyAlgorytm = QuickSort::sortuj;
+                nazwaAlgorytmu = "QuickSort";
                 break;
-            }
-            case 2: {
-                Timer timer("Shella");    // Dopisz tę linię
-                Shella::sortuj(daneKopia);
+            case 2:
+                wybranyAlgorytm = Shella::sortuj;
+                nazwaAlgorytmu = "Shella";
                 break;
-            }
-            case 3: {
-                Timer timer("PrzezWstawianie"); // Dopisz tę linię
-                PrzezWstawianie::sortuj(daneKopia);
+            case 3:
+                wybranyAlgorytm = PrzezWstawianie::sortuj;
+                nazwaAlgorytmu = "PrzezWstawianie";
                 break;
-            }
-            case 4: {
-                Timer timer("PrzezKopcowanie"); // Dopisz tę linię
-                PrzezKopcowanie::sortuj(daneKopia);
+            case 4:
+                wybranyAlgorytm = PrzezKopcowanie::sortuj;
+                nazwaAlgorytmu = "PrzezKopcowanie";
                 break;
-            }
             default:
                 cout << "Nieznany algorytm sortowania!" << endl;
                 return;
         }
 
-        // Testowanie poprawności sortowania
-        cout << "\nCzy chcesz teraz przetestowac czy tablica jest juz posortowana? (1 - tak, 0 - nie): ";
-        cin >> test;
-        if (test == 1) {
-            int czyPosortowana = Test::testSortowanie(daneKopia);
-            if (czyPosortowana > 0) {
-                cout << "Tablica nie jest posortowana" << endl;
-            }
-            else {
-                cout << "Tablica jest posortowana" << endl;
+        // Główna pętla 100 iteracji
+        long long lacznyCzas = 0; // Zmienna na łączny czas
+
+        for (int i = 0; i < 100; ++i) {
+            // Generowanie nowych danych dla każdej iteracji
+            dane = ObslugaDanych::generatorDanych<int>(rozmiar);
+            vector<int> daneKopia = dane;
+
+            // Pomiar czasu i sortowanie
+            Timer timer(nazwaAlgorytmu);
+            wybranyAlgorytm(daneKopia);
+            timer.zatrzymaj(); // Oblicz czas
+            lacznyCzas += timer.pobierzCzas(); // Dodaj do sumy
+
+            // Sprawdzanie poprawności sortowania
+            if (Test::testSortowanie(daneKopia) > 0) {
+                cout << "Blad sortowania w iteracji " << i+1 << endl;
             }
         }
 
-        // Wyświetlanie danych po sortowaniu
-        cout << "\nDane po sortowaniu:\n";
-        ObslugaDanych::wyswietlDane(daneKopia);
+        // Zapis łącznego czasu do pliku
+        ObslugaPliku::zapiszCzas(nazwaAlgorytmu, lacznyCzas, rozmiar);
+
+        cout << "\nTestowanie zakonczone. Sredni czas: " << lacznyCzas/100 << " mikrosekund" << ", czyli " <<
+        lacznyCzas/100/1000 << " ms" << endl;
+        cout << "Wynik zapisano w pliku czasy_sortowania.txt" << endl;
     }
 };
 

@@ -25,6 +25,16 @@ bool ObslugaPliku::wczytajRozmiar() {
     return true;
 }
 
+void ObslugaPliku::zapiszCzas(const std::string& nazwaAlgorytmu, long long czas, int rozmiar) {
+    std::ofstream plik("czasy_sortowania.txt", std::ios::app);
+    if (plik.is_open()) {
+        plik << "Algorytm: " << nazwaAlgorytmu
+             << ", średni czas sortowania po 100 iteracjach dla rozmiaru tablicy " << rozmiar << " : " << czas/100/1000 << " ms\n";
+        plik.close();
+    }
+}
+
+
 bool ObslugaPliku::wczytajWyniki() {
     if (!plik.is_open()) {
         cout << "Plik nie jest otwarty!" << endl;
