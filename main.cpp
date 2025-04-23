@@ -1,11 +1,9 @@
-#include <iostream>
-#include "ObslugaDanych.h"
 #include "Menu.h"
 
 using namespace std;
 
 int main() {
-    Menu::pokaz();
+    Menu::pokaz();      // Wywołanie menu
 
     return 0;
 }

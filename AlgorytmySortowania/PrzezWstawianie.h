@@ -9,7 +9,6 @@ using namespace std;
 class PrzezWstawianie {
 public:
     template<typename T>
-    // Implementacja sortowania przez wstawianie
     static void sortuj(vector<T>& dane, int lewo, int prawo) {
         for (int i = lewo + 1; i <= prawo; ++i) {
             T aktualny = dane[i];

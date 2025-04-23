@@ -24,7 +24,7 @@ public:
         random_device rd;
         mt19937 gen(rd());
 
-        // Generuj losowe dane
+        // Generowanie losowych danych
         if constexpr (is_integral_v<T>) {
             uniform_int_distribution<T> rozklad(1, 10000);
             for (auto& element : dane) element = rozklad(gen);
@@ -33,7 +33,7 @@ public:
             for (auto& element : dane) element = rozklad(gen);
         }
 
-        // Dostosuj dane według wybranego typu
+        // Ustawianie początkowej tablicy w zależności od wyboru
         switch(typ) {
             case POSORTOWANE_ROSNACO:
                 sort(dane.begin(), dane.end());

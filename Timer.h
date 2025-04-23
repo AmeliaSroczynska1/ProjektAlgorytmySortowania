@@ -5,19 +5,21 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 class Timer {
 private:
-    std::chrono::time_point<std::chrono::high_resolution_clock> start;
-    std::string nazwa;
+    chrono::time_point<chrono::high_resolution_clock> start;
+    string nazwa;
     long long czas = 0;
 
 public:
-    Timer(const std::string& nazwa = "Sortowanie")
-            : nazwa(nazwa), start(std::chrono::high_resolution_clock::now()) {}
+    Timer(const string& nazwa = "Sortowanie")
+            : nazwa(nazwa), start(chrono::high_resolution_clock::now()) {}
 
     void zatrzymaj() {
-        auto end = std::chrono::high_resolution_clock::now();
-        czas = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        auto end = chrono::high_resolution_clock::now();
+        czas = chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     }
 
     long long pobierzCzas() const {

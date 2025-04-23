@@ -53,6 +53,7 @@ private:
         int wyborTypu;
         cin >> wyborTypu;
 
+        // Wybór typu danych
         ObslugaDanych::TypDanych typ;
         switch(wyborTypu) {
             case 1: typ = ObslugaDanych::LOSOWE; break;
@@ -79,6 +80,7 @@ private:
         void (*wybranyAlgorytm)(vector<T>&) = nullptr;
         string nazwaAlgorytmu;
 
+        // Wybór algorytmu sortowania
         switch(wybor) {
             case 1: {// Wybór typu pivota dla QuickSorta
                 cout << "\nWybierz strategie wyboru pivota:\n"
@@ -86,6 +88,7 @@ private:
                 int wyborPivota;
                 cin >> wyborPivota;
 
+                // Ustawienie typu pivota
                 switch(wyborPivota) {
                     case 1: QuickSort::pivotTyp = QuickSort::LEWY; break;
                     case 2: QuickSort::pivotTyp = QuickSort::PRAWY; break;
@@ -131,9 +134,10 @@ private:
                 return;
         }
 
-        // Główna pętla 100 iteracji
+        // Będzie zliczać łączny czas sortowania
         float lacznyCzas = 0;
 
+        // Główna pętla 100 iteracji
         for (int i = 0; i < 100; ++i) {
             // Wersja ze wczytywaniem z pliku
 //            string plik;
@@ -182,6 +186,7 @@ private:
         cout << "Wynik zapisano w pliku czasy_sortowania.txt" << endl;
     }
 
+    // Funkcje pomocnicze do pobierania nazw strategii
     static string getNazwaPivota() {
         switch(QuickSort::pivotTyp) {
             case QuickSort::LEWY: return "Lewy";
